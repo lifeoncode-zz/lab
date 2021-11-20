@@ -1,5 +1,13 @@
 # Woring with string data types
 
+# case sensitive
+message = 'Hi I am Python'
+meSsage = 'Hi I am also Python'
+print(message)
+print(meSsage)
+print(f'{message} is not the same as {meSsage}.\n')
+
+# concat
 perosn_1 = 'jake'
 person_2 = 'fin'
 
