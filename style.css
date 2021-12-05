@@ -45,3 +45,8 @@ header nav a:last-child{
         padding: 0 50px;
     }
 }
+
+img{
+    width: 100%;
+    display: block;
+}
