@@ -14,7 +14,7 @@
 
 header{
     padding: 20px 0;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.063);
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.289);
 }
 
 header .container{
@@ -49,4 +49,18 @@ header nav a:last-child{
 img{
     width: 100%;
     display: block;
+}
+
+.logo{
+    width: 100px
+}
+
+main{
+    padding: 100px 0;
+}
+
+main .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
 }
