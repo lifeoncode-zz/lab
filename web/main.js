@@ -12,11 +12,6 @@ form.addEventListener('submit', function(e){
     let remove = document.createElement('i')
     li.textContent = input.value;
     remove.setAttribute('class', 'lni lni-close');
-    remove.addEventListener('click', function(e){
-        let item = this.parentElement.parentElement;
-        this.parentElement.remove(item);
-    })
-    
     input.value = null;
     li.appendChild(remove);
     list.appendChild(li);
@@ -25,16 +20,21 @@ form.addEventListener('submit', function(e){
 
 clear.addEventListener('click', function(e) {
     let items = list.children;
-    list.innerHTML = '';
+    for(let x = 0; x <= items.length; x++){
+        console.log(items[x])
+    }
 })
 
+document.body.addEventListener('click', remove);
 
-let label = form.firstElementChild;
-let newLabel = document.createElement('h3');
-newLabel.appendChild(document.createTextNode('New Task'));
-form.replaceChild(newLabel, label)
 
-setTimeout(() => {
-    form.removeChild(newLabel)
-}, 5000);
-
+function remove(e){
+    if(e.target.classList.contains('lni')){
+        let del = e.target;
+        let item = del.parentElement;
+        list.removeChild(item);
+        
+    }else{
+        console.log('clicked on body')
+    }
+}
