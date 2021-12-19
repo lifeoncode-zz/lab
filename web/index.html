@@ -10,33 +10,15 @@
 </head>
 <body>
 
-
-    <form action="#" autocomplete="off">
-        <h2>Loan calculator</h2>
-        <div class="error" id="error">Check the numbers entered</div>
-        <input type="text" placeholder="Loan amount ($)" id="amount" required>
-        <input type="text" placeholder="Annual interest (%)" id="interest" required>
-        <input type="text" placeholder="Repayment years" id="years" required>
-        <button type="submit">Calculate</button>
-        <div id="results" class="results">
-            <h3>Results</h3>
-            <div class="results-inner">
-                <div class="load"><div class="wheel"></div></div>
-                <div>
-                    <h4>Monthly payment</h4>
-                    <h4>Total payment</h4>
-                    <h4>Total interest</h4>
-                </div>
-                <div>
-                    <p id="monthly-pay">425.40</p>
-                    <p id="total-pay">10209.66</p>
-                    <p id="total-interest">209.66</p>
-                </div>
-            </div>
-        </div>
+    <h1>Guess the magic number between 1 and 10</h1>
+    <br>
+    <form action="#">
+        <input type="text" placeholder="Enter number..." required>
+        <button type="submit">Submit</button>
     </form>
-
-    
+    <br>
+    <div class="error"></div>
+    <div class="success"></div>
     <script src="./main.js"></script>
 </body>
 </html>
