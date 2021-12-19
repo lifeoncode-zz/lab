@@ -35,6 +35,35 @@ Client.prototype.greet = function(message){
 }
 
 const m = new Client('Maise', 'Johnson', '44f', '2020');
-console.log(j.greet('Hello'))
-console.log(m.greet('Hey there'))
+// console.log(j.greet('Hello'))
+// console.log(m.greet('Hey there'))
 
+
+
+
+
+// alternative way of protoype inheritencing
+const carProtos = {
+    info: function(){
+        return `${this.model} was built in ${this.year} by ${this.manufacturer}`;
+    },
+    design: function(){
+        return `${this.model} was designed by ${this.designer}`;
+    } 
+}
+
+const p = Object.create(carProtos, {
+    model: {value: 'p1'},
+    year: {value: '2013'},
+    manufacturer: {value: 'McLaren'},
+    designer: {value: 'Frank Stephenson'}
+})
+
+
+// p.model = 'p1';
+// p.year = '2013';
+// p.manufacturer = 'McLaren';
+// p.designer = 'Frank Stephenson';
+
+console.log(p.info());
+console.log(p.design());
