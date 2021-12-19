@@ -10,6 +10,7 @@ function Book(title, author, isbn){
 
 // UI constructor
 function UI(){
+    // add book proto
     UI.prototype.addBookToList = function(book){
         const list = document.querySelector('#book-list');
         // create elements
@@ -21,6 +22,13 @@ function UI(){
         <td><a href="#" class="delete">X</a></td>
         `
         list.appendChild(row);
+    }
+
+    // clear fields proto
+    UI.prototype.clearFields = function(){
+        document.querySelectorAll('input[type="text"]').forEach(function(input){
+            input.value = '';
+        })
     }
 }
 
@@ -40,7 +48,9 @@ document.querySelector('#book-form').addEventListener('submit', function(e){
     // add book to list
     ui.addBookToList(book);
 
-    
+    // clear input fields after adding book
+    ui.clearFields(document.querySelector('#book-form'));
+
     
     console.log(book);
     e.preventDefault();
