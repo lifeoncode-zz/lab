@@ -34,7 +34,7 @@ player_two.goto(-200, -100)
 
 # gameplay
 die = [1, 2, 3, 4, 5, 6]
-while 
+# while 
 
     
     
