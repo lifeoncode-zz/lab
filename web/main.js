@@ -29,6 +29,10 @@ Client.prototype.info = function(){
 // inherit prototypes from Person
 Client.prototype = Object.create(Person.prototype)
 
+// overide original greet message
+Client.prototype.greet = function(message){
+    return `${this.name} is saying ${message}`;
+}
 
 const m = new Client('Maise', 'Johnson', '44f', '2020');
 console.log(j.greet('Hello'))
