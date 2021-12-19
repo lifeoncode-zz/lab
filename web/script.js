@@ -21,12 +21,17 @@ class Client extends Person{
         this.membership = membership;
         this.email = email;
     }
+
+    thankClient(){
+        let currentYear = new Date().getFullYear();
+        return `Hey ${this.name}, it has been ${currentYear - this.membership} years on your membership with us. Thank you for your support!`;
+    }
 }
 
 
 const james = new Person('James', 'May');
-const jack = new Client('Jack', 'Barker', '2008', 'jack@hotmail.co.uk');
+const jack = new Client('Jack', 'Barker', 2008, 'jack@hotmail.co.uk');
 
 
-console.log(james)
-console.log(jack)
+console.log(james);
+console.log(jack.thankClient());
