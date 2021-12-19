@@ -9,21 +9,24 @@ class Person{
     fullName(){
         return `${this.name} ${this.surname}`
     }
-
     greet(){
         return `hello there ${this.name}.`
     }
 }
 
-// Person.prototype.fullName = function(){
-//     return `${this.name} ${this.surname}`
-// }
-// Person.prototype.greet = function(){
-//     return `Hello there ${this.name}.`
-// }
+// inherit
+class Client extends Person{
+    constructor(name, surname, membership, email){
+        super(name, surname)
+        this.membership = membership;
+        this.email = email;
+    }
+}
+
 
 const james = new Person('James', 'May');
-const jack = new Person('Jack', 'Barker');
+const jack = new Client('Jack', 'Barker', '2008', 'jack@hotmail.co.uk');
 
 
+console.log(james)
 console.log(jack)
