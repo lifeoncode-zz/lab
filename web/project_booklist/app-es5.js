@@ -45,14 +45,37 @@ document.querySelector('#book-form').addEventListener('submit', function(e){
     // instantiate a new book in UI
     const ui = new UI();
 
-    // add book to list
-    ui.addBookToList(book);
+    // validate before adding book
+    if(title === '' || author === '' || isbn === ''){
+        let error = document.createElement('div');
+        error.className = 'error';
+        error.textContent = 'Enter all fields'
+        document.querySelector('.container').insertBefore(error, document.querySelector('#book-form'));
 
-    // clear input fields after adding book
-    ui.clearFields(document.querySelector('#book-form'));
+        // hide error
+        setTimeout(() => {
+            document.querySelector('.error').remove();
+        }, 3000);
 
+    }else{
+
+        // add book to list
+        ui.addBookToList(book);
     
-    console.log(book);
+        // clear input fields after adding book
+        ui.clearFields(document.querySelector('#book-form'));
+    
+        let success = document.createElement('div');
+        success.className = 'success';
+        success.textContent = 'Book added'
+        document.querySelector('.container').insertBefore(success, document.querySelector('#book-form'));
+
+        // hide error
+        setTimeout(() => {
+            document.querySelector('.success').remove();
+        }, 3000);
+    }
+
     e.preventDefault();
 })
 
