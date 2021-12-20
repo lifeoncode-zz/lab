@@ -1,5 +1,6 @@
 // ES6 CONSTRUCTOR METHOD
 
+
 // book class
 class Book{
     constructor(title, author, isbn){
@@ -38,7 +39,7 @@ class UI{
             document.querySelector('.alert').remove();
         }, 3000)
     }
-
+    
     // delete book from ui list
     deleteBook(target){
         target.parentElement.parentElement.remove();
@@ -46,7 +47,7 @@ class UI{
         let toDelete = target.parentElement.parentElement.lastElementChild.previousElementSibling.textContent;
         Store.removeBook(toDelete);
     }
-
+    
     // clear all input fields
     clearFields(){
         document.querySelectorAll('input[type="text"]').forEach(input => {
@@ -71,7 +72,7 @@ class Store{
     
     static displayBooks(){
         let books = this.getBooks();
-        const ui = new UI()
+        const ui = new UI;
         books.forEach(book => {
             ui.addBookToList(book)
         });
@@ -141,3 +142,7 @@ document.querySelector('#book-list').addEventListener('click', function(e){
         e.preventDefault();
     }
 })
+
+
+
+window.addEventListener('DOMContentLoaded', Store.displayBooks());
