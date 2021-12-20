@@ -44,7 +44,7 @@ class UI{
     deleteBook(target){
         target.parentElement.parentElement.remove();
         // delete from DB
-        let toDelete = target.parentElement.parentElement.lastElementChild.previousElementSibling.textContent;
+        let toDelete = target.parentElement.previousElementSibling.textContent;
         Store.removeBook(toDelete);
     }
     
@@ -142,7 +142,3 @@ document.querySelector('#book-list').addEventListener('click', function(e){
         e.preventDefault();
     }
 })
-
-
-
-window.addEventListener('DOMContentLoaded', Store.displayBooks());
