@@ -42,6 +42,9 @@ class UI{
     // delete book from ui list
     deleteBook(target){
         target.parentElement.parentElement.remove();
+        // delete from DB
+        let toDelete = target.parentElement.parentElement.lastElementChild.previousElementSibling.textContent;
+        Store.removeBook(toDelete);
     }
 
     // clear all input fields
@@ -52,6 +55,50 @@ class UI{
     }
 }
 
+
+// save to database
+class Store{
+    static getBooks(){
+        let books;
+        if(localStorage.getItem('books')){
+            books = JSON.parse(localStorage.getItem('books'));
+        }else{
+            books = [];
+        }
+
+        return books;
+    }
+    
+    static displayBooks(){
+        if(localStorage.getItem('books')){
+            let books = JSON.parse(localStorage.getItem('books'));
+            const ui = new UI()
+            books.forEach(book => {
+                ui.addBookToList(book)
+            });
+        }
+    }
+
+    static addBook(book){
+        const books = this.getBooks();
+        books.push(book);
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+    
+    static removeBook(target){
+        if(localStorage.getItem('books')){
+            let books = JSON.parse(localStorage.getItem('books'));
+            books.forEach(book => {
+                if(book.isbn === target){
+                    books.splice(books.indexOf(book), 1);
+                    localStorage.setItem('books', JSON.stringify(books));
+                }
+            })
+        }
+    }
+}
+
+Store.displayBooks()
 
 // event on form submit
 document.querySelector('#book-form').addEventListener('submit', function(e){
@@ -72,6 +119,9 @@ document.querySelector('#book-form').addEventListener('submit', function(e){
     }else{
         // add book to list
         ui.addBookToList(book);
+        // save to database
+        Store.addBook(book);
+
         // show alert
         ui.showAlert('Book added', 'success');
         // clear input fields after adding book
