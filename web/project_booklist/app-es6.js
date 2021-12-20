@@ -70,13 +70,11 @@ class Store{
     }
     
     static displayBooks(){
-        if(localStorage.getItem('books')){
-            let books = JSON.parse(localStorage.getItem('books'));
-            const ui = new UI()
-            books.forEach(book => {
-                ui.addBookToList(book)
-            });
-        }
+        let books = this.getBooks();
+        const ui = new UI()
+        books.forEach(book => {
+            ui.addBookToList(book)
+        });
     }
 
     static addBook(book){
@@ -86,15 +84,13 @@ class Store{
     }
     
     static removeBook(target){
-        if(localStorage.getItem('books')){
-            let books = JSON.parse(localStorage.getItem('books'));
-            books.forEach(book => {
-                if(book.isbn === target){
-                    books.splice(books.indexOf(book), 1);
-                    localStorage.setItem('books', JSON.stringify(books));
-                }
-            })
-        }
+        let books = this.getBooks();
+        books.forEach(book => {
+            if(book.isbn === target){
+                books.splice(books.indexOf(book), 1);
+                localStorage.setItem('books', JSON.stringify(books));
+            }
+        })
     }
 }
 
