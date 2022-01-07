@@ -20,14 +20,20 @@ function getJokes(e){
         xhr.onload = function(){
             if(this.status === 200){
                 const response = JSON.parse(this.responseText);
-                const jokes = response.value;
-                jokes.forEach(joke => {
-                    output.innerHTML += `
-                    <p>
-                    <span style="font-size:20px;font-weight:800">${jokes.indexOf(joke)+1}</span>
-                    ${joke.joke}</p>
-                    `;
-                })
+
+                if(response.type === 'success'){
+                    const jokes = response.value;
+                    jokes.forEach(joke => {
+                        output.innerHTML += `
+                        <ul>
+                            <li>${joke.joke}</li>
+                        </ul>
+                        `;
+                    })
+
+                }else{
+                    output.innerHTML = '<span>Something went wrong</span>';
+                }
             }
         }
         
