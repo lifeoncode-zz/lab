@@ -1,0 +1,54 @@
+@import '../config.css';
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.container{
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.display{
+    text-align: right;
+    padding: 20px 10px;
+    font-size: 20px;
+    border: 1px solid #999;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.button{
+    border: 0.5px solid #aaa;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#equals{
+    background-color: rgb(0, 102, 255);
+    border: 0.5px solid rgb(0, 102, 255);
+    color: #fff;
+}
+
+#equals:hover{
+    background-color: rgb(0, 102, 255);
+    color: #fff;
+}
+
+.button:hover{
+    background-color: #333;
+    color: #fff;
+}
