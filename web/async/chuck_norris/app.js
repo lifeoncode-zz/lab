@@ -1,11 +1,13 @@
-const btn = document.querySelector('#get-jokes'),
+
+const form = document.querySelector('form'),
     jokesInput = document.querySelector('#number'),
     output = document.querySelector('#jokes-output');
 
 // when get jokes button clicks
-btn.addEventListener('click', getJokes);
+form.addEventListener('submit', getJokes);
 // get the jokes from API
-function getJokes(){
+function getJokes(e){
+    e.preventDefault();
     // first make sure input field for number of jokes is not empty and whats in there is a real Number
     if(jokesInput.value === '' || isNaN(jokesInput.value)){
         alert('Enter number of jokes to generate');
