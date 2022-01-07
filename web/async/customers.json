@@ -1,36 +1,26 @@
 
-{
-
-    "customers":{
+[
+    {
         "id": 1,
         "name": "Jake Tran",
         "company": "Apple Inc",
-        "email": "jake@jaketran.io",
+        "email": "jake@icloud.com",
         "phone": 555362
     },
 
     {
-        "id": 1,
-        "name": "Jake Tran",
-        "company": "Apple Inc",
-        "email": "jake@jaketran.io",
-        "phone": 555362
-    }
+        "id": 2,
+        "name": "Michelle Jacobs",
+        "company": "Yello Garden",
+        "email": "michelleJ@gmail.com",
+        "phone": 563389
+    },
 
     {
-        "id": 1,
-        "name": "Jake Tran",
-        "company": "Apple Inc",
-        "email": "jake@jaketran.io",
-        "phone": 555362
+        "id": 3,
+        "name": "Joseph Kent",
+        "company": "Nvidia",
+        "email": "jkent@outlook.com",
+        "phone": 896233
     }
-
-    {
-        "id": 1,
-        "name": "Jake Tran",
-        "company": "Apple Inc",
-        "email": "jake@jaketran.io",
-        "phone": 555362
-    }
-
-}
+]
