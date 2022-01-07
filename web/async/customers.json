@@ -1,0 +1,36 @@
+
+{
+
+    "customers":{
+        "id": 1,
+        "name": "Jake Tran",
+        "company": "Apple Inc",
+        "email": "jake@jaketran.io",
+        "phone": 555362
+    },
+
+    {
+        "id": 1,
+        "name": "Jake Tran",
+        "company": "Apple Inc",
+        "email": "jake@jaketran.io",
+        "phone": 555362
+    }
+
+    {
+        "id": 1,
+        "name": "Jake Tran",
+        "company": "Apple Inc",
+        "email": "jake@jaketran.io",
+        "phone": 555362
+    }
+
+    {
+        "id": 1,
+        "name": "Jake Tran",
+        "company": "Apple Inc",
+        "email": "jake@jaketran.io",
+        "phone": 555362
+    }
+
+}
