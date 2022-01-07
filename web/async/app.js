@@ -47,7 +47,6 @@ function loadCustomers(){
                 `;
             })
             
-            console.log(this.responseText);
         }
     }
     
