@@ -12,7 +12,7 @@ function loadCustomer(){
             const customer = JSON.parse(this.responseText);
             document.querySelector('#customer').innerHTML = `
             <ul>
-                <li><strong>ID:</strong> ${customer.name}</li>
+                <li><strong>ID:</strong> ${customer.id}</li>
                 <li><strong>Name:</strong> ${customer.name}</li>
                 <li><strong>Company:</strong> ${customer.company}</li>
                 <li><strong>Email:</strong> ${customer.email}</li>
@@ -34,6 +34,19 @@ function loadCustomers(){
 
     xhr.onload = function(){
         if(this.status === 200){
+            const customers = JSON.parse(this.responseText);
+            customers.forEach(customer => {
+                document.querySelector('#customers').innerHTML += `
+                <ul style="border:1px solid black; padding: 10px; border-radius:5px;">
+                    <li><strong>ID:</strong> ${customer.id}</li>
+                    <li><strong>Name:</strong> ${customer.name}</li>
+                    <li><strong>Company:</strong> ${customer.company}</li>
+                    <li><strong>Email:</strong> ${customer.email}</li>
+                    <li><strong>Phone:</strong> ${customer.phone}</li>
+                </ul>
+                `;
+            })
+            
             console.log(this.responseText);
         }
     }
