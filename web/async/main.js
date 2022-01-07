@@ -26,7 +26,19 @@ function loadData(e){
     // open
     xhr.open('GET', 'data.txt', true);
 
+    // while loading
+    xhr.onprogress = function(){
+        document.querySelector('.container').innerHTML = `
+        <h1>Loading...</h1>
+        `
+    }
+
+
     xhr.onload = function(){
+        document.querySelector('.container').innerHTML = `
+        <button type="button">get data</button>
+        `
+        
         // check net status
         if(this.status === 200){
             console.log(this.responseText);
