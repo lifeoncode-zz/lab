@@ -27,21 +27,23 @@ function loadData(e){
     xhr.open('GET', 'data.txt', true);
 
     // while loading
-    xhr.onprogress = function(){
-        document.querySelector('.container').innerHTML = `
-        <h1>Loading...</h1>
-        `
-    }
+    // xhr.onprogress = function(){
+    //     document.querySelector('.container').innerHTML = `
+    //     <h1>Loading...</h1>
+    //     `
+    // }
 
 
+
+    // when loaded
     xhr.onload = function(){
-        document.querySelector('.container').innerHTML = `
-        <button type="button">get data</button>
-        `
+        // document.querySelector('.container').innerHTML = `
+        // <button type="button">get data</button>
+        // `
         
         // check net status
         if(this.status === 200){
-            console.log(this.responseText);
+            document.querySelector('#output').textContent = this.responseText;
             
         }else if(this.status === 404){
             document.querySelector('.container').innerHTML = `
@@ -55,3 +57,4 @@ function loadData(e){
     // send
     xhr.send();
 }
+
