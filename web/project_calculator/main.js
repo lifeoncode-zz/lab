@@ -18,7 +18,7 @@ buttons.forEach(btn => {
                 break;
 
             default:    display.textContent += btn.textContent;
-
+                break;
         }
     })
 
