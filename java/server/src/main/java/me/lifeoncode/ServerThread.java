@@ -29,9 +29,11 @@ public class ServerThread extends Thread {
             System.out.println("> client connected.");
             while(true) {
                 String echo = input.readLine();
+                System.out.println("processing: "+echo);
                 if (echo.equalsIgnoreCase("exit")) {
                     break;
                 }
+                
                 output.printf("Server message: %s\n",echo);
             }
             

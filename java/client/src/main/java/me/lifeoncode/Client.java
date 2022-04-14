@@ -9,13 +9,16 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        
         try(Socket socket = new Socket("20.20.10.240", 3000)) {
             BufferedReader echoes = new BufferedReader(
                 new InputStreamReader(socket.getInputStream())
             );
             PrintWriter stringToEcho = new PrintWriter(socket.getOutputStream(), true);
 
-            Scanner scanner = new Scanner(System.in);
             String req;
             String res;
 
