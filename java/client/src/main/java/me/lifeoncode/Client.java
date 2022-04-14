@@ -8,8 +8,8 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-    public static void main( String[] args ) {
-        try(Socket socket = new Socket("127.0.0.1", 3000)) {
+    public static void main(String[] args) {
+        try(Socket socket = new Socket("20.20.10.240", 3000)) {
             BufferedReader echoes = new BufferedReader(
                 new InputStreamReader(socket.getInputStream())
             );
@@ -19,9 +19,10 @@ public class Client {
             String req;
             String res;
 
-            // do while loop better for making sure client is prompted at leas once
+            // do while loop better for making sure client
+            // is prompted at least once
             do {
-                System.out.println("Enter something to display: ");
+                System.out.println("Say something: ");
                 req = scanner.nextLine();
 
                 stringToEcho.println(req);
@@ -32,7 +33,7 @@ public class Client {
                 
             }while(!req.equalsIgnoreCase("exit"));
 
-            
+
         } catch (IOException e) {
             System.out.println("Client error: "+e.getMessage());
         }
