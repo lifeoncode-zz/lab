@@ -42,10 +42,26 @@
                 border: 2px solid $red;
             }
         }
+
+        label {
+            font-family: 'DM Serif Display', serif;
+            font-size: 30px;
+            font-weight: 500;
+            color: $black;
+            opacity: 0.6;
+
+            &.error {
+                color: $red;
+            }
+        }
+
+        input {
+            padding: 20px;
+        }
     
         #title {
             font-size: 30px;
-            font-weight: 900;
+            font-weight: 500;
             font-family: 'DM serif Display', serif;
             color: $dark-red;
         }

@@ -272,9 +272,25 @@ footer {
   border: 2px solid orangered;
 }
 
+.publish #form label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #121212;
+  opacity: 0.6;
+}
+
+.publish #form label.error {
+  color: orangered;
+}
+
+.publish #form input {
+  padding: 20px;
+}
+
 .publish #form #title {
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 500;
   font-family: 'DM serif Display', serif;
   color: #2e0d01;
 }

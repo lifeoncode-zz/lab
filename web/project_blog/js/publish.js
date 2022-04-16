@@ -1,8 +1,30 @@
 // grab elements
+const coverImage = document.querySelector('#cover');
 const title = document.querySelector('#title');
 const paragraph = document.querySelector('#paragraph');
 const publishBtn = document.querySelector('#publish-btn');
 const publishIcon = document.querySelector('#publish-icon');
+
+// on image selection
+coverImage.addEventListener('change', function() {
+    const reader = new FileReader();
+
+    reader.addEventListener('load', () => {
+        if (localStorage.getItem('blog-images') !== null) {
+            const blogImages = JSON.parse(localStorage.getItem('blog-images'));
+            blogImages.push(reader.result);
+            localStorage.setItem('blog-images', JSON.stringify(blogImages));
+    
+        }else {
+            const blogImages = [reader.result];
+            localStorage.setItem('blog-images', JSON.stringify(blogImages));
+        }
+    })
+
+    reader.readAsDataURL(this.files[0])
+            
+})
+
 
 // on publish click
 publishBtn.addEventListener('click', publishArticle);
@@ -18,7 +40,15 @@ function publishArticle(e) {
 
 // validate content
 function validContent() {
-    if (title.value == '') {
+    if (coverImage.value == '') {
+        document.querySelector('label').classList.add('error');
+        setTimeout(() => {
+            document.querySelector('label').classList.remove('error');
+        }, 3000);
+        
+        return false;
+
+    } else if (title.value == '') {
         title.classList.add('error');
         setTimeout(() => {
             title.classList.remove('error');
@@ -26,7 +56,7 @@ function validContent() {
 
         return false;
 
-    }else if (paragraph.value == '') {
+    } else if (paragraph.value == '') {
         paragraph.classList.add('error');
         setTimeout(() => {
             paragraph.classList.remove('error');
@@ -42,12 +72,16 @@ function validContent() {
 
 // build article to send to database
 function buildArticle() {
+    let blogImages = JSON.parse(localStorage.getItem('blog-images'));
+    console.log(blogImages)
+    
     const article = {
         title: title.value,
         paragraph: paragraph.value
     }
 
-    saveToDatabase(article);
+    // saveToDatabase(article);
+    console.log(article)
 }
 
 
