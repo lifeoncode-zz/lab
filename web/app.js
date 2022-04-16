@@ -1,8 +1,19 @@
 
 
+const email = document.querySelector('input')
 
-function hello(...name) {
-    name.forEach(one => { console.log("hello", one) })
+email.addEventListener('keypress', check);
+
+function check(e) {
+    if(e.keyCode === 13) {
+        validate(email.value);
+    }
 }
 
-hello("jake", "mike")
+function validate(email) {
+    if(email.includes('.') && email.includes('@') && email.length > 5) {
+        console.log('valid email');
+    }else {
+        console.log('invalid email');
+    }
+}
