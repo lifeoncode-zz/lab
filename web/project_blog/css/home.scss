@@ -1,1 +1,60 @@
 @import './config';
+
+// hero section
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 20px;
+    height: 60vh;
+    text-align: center;
+    position: relative;
+    @include flex();
+
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $black;
+        content: '';
+        opacity: 0.6;
+    }
+    
+    .container {
+        position: relative;
+        z-index: 2;
+        color: $white;
+    }
+
+    h1 {
+        color: $white;
+    }
+    
+    p {
+        color: $white;
+        margin: 20px 0 40px 0;
+        font-size: 22px;
+    }
+}
+
+// fetured section
+.featured {
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .more {
+        text-align: center;
+
+        h3.underlined-link {
+            display: inline-block;
+
+            span {
+                height: 2px;
+            }
+        }
+    }
+}

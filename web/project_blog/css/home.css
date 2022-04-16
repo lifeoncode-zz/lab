@@ -8,8 +8,15 @@
   font-family: 'Oswald', sans-serif;
 }
 
+img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
 h1, h2, h3, .logo {
   font-family: 'DM Serif Display', serif;
+  color: #2e0d01;
 }
 
 h1 {
@@ -36,6 +43,12 @@ h3 {
   font-size: 40px;
 }
 
+@media only screen and (max-width: 1400px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   h3 {
     font-size: 25px;
@@ -45,13 +58,17 @@ h3 {
 p {
   font-size: 18px;
   line-height: 1.4;
-  opacity: 0.8;
+  color: #121212;
 }
 
 @media only screen and (max-width: 600px) {
   p {
     font-size: 16px;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -73,5 +90,207 @@ p {
 
 section {
   padding: 100px 0;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #fcfcfc;
+  background-color: orangered;
+  font-size: 16px;
+}
+
+.blog-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+}
+
+@media only screen and (max-width: 1900px) {
+  .blog-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .blog-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 80px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .blog-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .blog-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-grid {
+    width: 100%;
+  }
+}
+
+.blog .image {
+  border-radius: 5px;
+  height: 300px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog .image {
+    height: 150px;
+  }
+}
+
+.blog .image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog .text {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog .text {
+    padding: 10px;
+  }
+}
+
+.blog p {
+  margin: 10px 0 20px 0;
+}
+
+.underlined-link {
+  position: relative;
+  color: #121212;
+}
+
+.underlined-link:hover span {
+  width: 100%;
+}
+
+.underlined-link span {
+  position: absolute;
+  bottom: -2px;
+  height: 1px;
+  left: 0;
+  width: 25%;
+  background-color: #121212;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+footer {
+  padding: 50px 0;
+  background-color: #121212;
+  color: #fcfcfc;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 10px;
+  }
+}
+
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 20px;
+  height: 60vh;
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  content: '';
+  opacity: 0.6;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  color: #fcfcfc;
+}
+
+.hero h1 {
+  color: #fcfcfc;
+}
+
+.hero p {
+  color: #fcfcfc;
+  margin: 20px 0 40px 0;
+  font-size: 22px;
+}
+
+.featured h2 {
+  margin-bottom: 30px;
+}
+
+.featured .more {
+  text-align: center;
+}
+
+.featured .more h3.underlined-link {
+  display: inline-block;
+}
+
+.featured .more h3.underlined-link span {
+  height: 2px;
 }
 /*# sourceMappingURL=home.css.map */
