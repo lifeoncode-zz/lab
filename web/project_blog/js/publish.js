@@ -22,7 +22,6 @@ coverImage.addEventListener('change', function() {
     })
 
     reader.readAsDataURL(this.files[0])
-            
 })
 
 
@@ -81,6 +80,10 @@ function buildArticle() {
     }
 
     saveToDatabase(article);
+    
+    setTimeout(() => {
+        document.querySelector('#success').classList.add('pulbished');
+    }, 1000);
 }
 
 
@@ -90,13 +93,11 @@ function saveToDatabase(article) {
     if (localStorage.getItem('articles') == null) {
         const articles = [article];
         localStorage.setItem('articles', JSON.stringify(articles));
-        console.log('Article published..');
 
     }else {
         const articles = JSON.parse(localStorage.getItem('articles'));
         articles.push(article);
 
         localStorage.setItem('articles', JSON.stringify(articles));
-        console.log('new article added')
     }
 }
