@@ -269,7 +269,7 @@ footer {
 }
 
 .publish #form textarea.error {
-  border: 1px solid orangered;
+  border: 2px solid orangered;
 }
 
 .publish #form #title {

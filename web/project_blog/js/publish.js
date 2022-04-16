@@ -11,9 +11,7 @@ publishIcon.addEventListener('click', publishArticle);
 // publish article
 function publishArticle(e) {
     if (validContent()) {
-        console.log('good to go');
-    }else {
-        console.log('not good');
+        buildArticle();
     }
 }
 
@@ -38,5 +36,34 @@ function validContent() {
 
     }else {
         return true;
+    }
+}
+
+
+// build article to send to database
+function buildArticle() {
+    const article = {
+        title: title.value,
+        paragraph: paragraph.value
+    }
+
+    saveToDatabase(article);
+}
+
+
+// database
+function saveToDatabase(article) {
+
+    if (localStorage.getItem('articles') == null) {
+        const articles = [article];
+        localStorage.setItem('articles', JSON.stringify(articles));
+        console.log('Article published..');
+
+    }else {
+        const articles = JSON.parse(localStorage.getItem('articles'));
+        articles.push(article);
+
+        localStorage.setItem('articles', JSON.stringify(articles));
+        console.log('new article added')
     }
 }
