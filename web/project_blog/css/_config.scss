@@ -62,3 +62,20 @@ p {
 section {
     padding: 100px 0;
 }
+
+// functions
+@mixin flex($align:center, $justify:center, $direction:row, $wrap:wrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin grid($columns, $gap:20px) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap: $gap;
+}
+
+
