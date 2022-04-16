@@ -265,6 +265,11 @@ footer {
   padding: 15px;
   width: 100%;
   margin-bottom: 20px;
+  outline: none;
+}
+
+.publish #form textarea.error {
+  border: 1px solid orangered;
 }
 
 .publish #form #title {
