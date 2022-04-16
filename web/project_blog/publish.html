@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/blog.css">
+    <link rel="stylesheet" href="./css/publish.css">
     <title>Document</title>
 </head>
 <body>
 
     <section id="publish" class="publish">
         <div class="container">
+            <button type="button" id="publish-btn" class="cta-btn">publish <i class="fas fa-upload"></i></button>
+            <button type="button" id="publish-icon" class="cta-btn"><i class="fas fa-upload"></i></button>
             
-            <form action="#" method="post">
-                <input type="text" placeholder="Title" required>
-                <textarea id="paragraph" rows="auto" placeholder="Paragraph" required></textarea>
-            </form>
-            
+            <div id="form">
+                <textarea id="title" rows="2" placeholder="Title" required></textarea>
+                <textarea id="paragraph" rows="100%" placeholder="Paragraph" required></textarea>
+            </div>
+
         </div>
     </section>
 

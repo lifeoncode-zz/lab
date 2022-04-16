@@ -1,0 +1,65 @@
+@import './config';
+
+.publish {
+    padding: 60px 0;
+
+    #publish-btn {
+        position: fixed;
+        top: 60px;
+        right: 40px;
+        border: 0;
+        cursor: pointer;
+        outline: none;
+
+        @media only screen and (max-width: 1100px) {
+            display: none;
+        }
+    }
+
+    #publish-icon {
+        @extend #publish-btn;
+        right: 20px;
+        padding: 10px;
+        display: none;
+        
+        
+        @media only screen and (max-width: 1100px) {
+            display: inline-block;
+        }
+    }
+
+    #form {
+        width: 50%;
+        margin: 0 auto;
+
+        textarea {
+            padding: 15px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    
+        #title {
+            font-size: 30px;
+            font-weight: 900;
+            font-family: 'DM serif Display', serif;
+            color: $dark-red;
+        }
+    
+        #paragraph {
+            font-size: 20px;
+            color: $black;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            width: 70%;
+        }
+
+        @media only screen and (max-width: 780px) {
+            width: 86%;
+            margin: 0;
+        }
+    }
+
+}
+
+
