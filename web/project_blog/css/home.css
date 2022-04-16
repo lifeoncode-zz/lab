@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 25px;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 2020px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 14px;
+  }
+}
+
+section {
+  padding: 100px 0;
+}
+/*# sourceMappingURL=home.css.map */
