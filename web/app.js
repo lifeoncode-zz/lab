@@ -1,6 +1,7 @@
 
 
 const email = document.querySelector('input')
+console.log(email.dataset.ty)
 
 email.addEventListener('keypress', check);
 
@@ -28,3 +29,5 @@ try {
 }
 
 console.log('still running')
+
+

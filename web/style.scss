@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 100px;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 80px;
+    }
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 40px;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 35px;
+    }
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.4;
+    opacity: 0.7;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 18px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: darkcyan;
+    display: inline-block;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(12, 13, 24);
+}
+
+header {
+    padding: 20px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-weight: 900;
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+
+    nav a {
+        margin-left: 50px;
+        color: #333;
+    }
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 2020px) {
+        padding: 0 20px;
+    }
+}
+
+section {
+    padding: 100px 0;
+}
+
+.hero {
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-image: url('./mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.301);
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        line-height: 1.2;
+        margin-bottom: 50px;
+    }
+
+    .btn {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+    }
+}
+
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @media only screen and (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.blog {
+    .image {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .text {
+        padding: 10px;
+
+        p {
+            margin: 20px 0 30px 0;
+        }
+    }
+}
