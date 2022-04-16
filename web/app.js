@@ -17,3 +17,14 @@ function validate(email) {
         console.log('invalid email');
     }
 }
+
+
+try {
+    const name = "joseph";
+    name();
+    
+} catch (error) {
+    console.log('Something went wrong: ',error)
+}
+
+console.log('still running')
