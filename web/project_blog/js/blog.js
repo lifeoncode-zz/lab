@@ -23,14 +23,12 @@ function displayBlog(blog) {
     const coverContainer = document.createElement('div');
     const textContainer = document.createElement('div');
     const image = document.createElement('img');
-    // assign classes
+    // assign classes and attr
     blogContainer.className = 'blog';
     coverContainer.className = 'image';
     textContainer.className = 'text';
     image.setAttribute('src', blog.cover);
     // content elements on-the-fly
-    // coverContainer.innerHTML = `<img href="${blog.cover}" alt="blog cover image">`;
-    
     textContainer.innerHTML += `
     <h3 class="title">${blog.title}</h3>
     <p>${blog.paragraph}</p>
