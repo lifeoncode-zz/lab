@@ -73,9 +73,9 @@ function validContent() {
 // build article to send to database
 function buildArticle() {
     let blogImages = JSON.parse(localStorage.getItem('blog-images'));
-    console.log(blogImages)
-    
+
     const article = {
+        cover: blogImages[blogImages.length-1],
         title: title.value,
         paragraph: paragraph.value
     }
