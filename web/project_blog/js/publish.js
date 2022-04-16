@@ -80,8 +80,7 @@ function buildArticle() {
         paragraph: paragraph.value
     }
 
-    // saveToDatabase(article);
-    console.log(article)
+    saveToDatabase(article);
 }
 
 
