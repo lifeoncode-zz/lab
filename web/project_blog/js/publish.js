@@ -10,15 +10,7 @@ coverImage.addEventListener('change', function() {
     const reader = new FileReader();
 
     reader.addEventListener('load', () => {
-        if (localStorage.getItem('blog-images') !== null) {
-            const blogImages = JSON.parse(localStorage.getItem('blog-images'));
-            blogImages.push(reader.result);
-            localStorage.setItem('blog-images', JSON.stringify(blogImages));
-    
-        }else {
-            const blogImages = [reader.result];
-            localStorage.setItem('blog-images', JSON.stringify(blogImages));
-        }
+            localStorage.setItem('blog-image', reader.result);
     })
 
     reader.readAsDataURL(this.files[0])
@@ -71,10 +63,10 @@ function validContent() {
 
 // build article to send to database
 function buildArticle() {
-    let blogImages = JSON.parse(localStorage.getItem('blog-images'));
+    let blogImage = localStorage.getItem('blog-image');
 
     const article = {
-        cover: blogImages[blogImages.length-1],
+        cover: blogImage,
         title: title.value,
         paragraph: paragraph.value
     }
