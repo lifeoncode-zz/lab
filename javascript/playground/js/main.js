@@ -1,2 +1,4 @@
 
-const str = "this is string"
+function greet(name) {
+    console.log("Hello", name)
+}

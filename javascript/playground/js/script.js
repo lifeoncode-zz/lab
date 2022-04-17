@@ -1,2 +1,1 @@
-
-console.log(str);
+greet("Jake")
