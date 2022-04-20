@@ -1,4 +1,1 @@
-
-function greet(name) {
-    console.log("Hello", name)
-}
+// i am not proving anything!
