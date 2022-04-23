@@ -13,7 +13,7 @@ public class Client {
         System.out.print("Enter username: ");
         String username = scanner.nextLine();
         
-        try(Socket socket = new Socket("20.20.10.240", 3000)) {
+        try(Socket socket = new Socket("127.0.0.1", 3000)) {
             BufferedReader echoes = new BufferedReader(
                 new InputStreamReader(socket.getInputStream())
             );
