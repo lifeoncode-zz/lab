@@ -1,17 +1,20 @@
 package me.lifeoncode;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class App {
     public static void main( String[] args ) {
-        int x = 0;
-        int y = x++;
-        System.out.println(x);
-        System.out.println(y);
+        Scanner scanner = new Scanner(System.in);
+        String n = scanner.nextLine();
+        try {
+            int num = Integer.parseInt(n);
+            System.out.println("success");
 
-        int w = 3;
-        int z = ++w;
-        System.out.println(w);
-        System.out.println(z);
+        } catch (Exception err) {
+            System.out.println("failed to convert: "+err.getMessage());
+        }
+
+        System.out.println("\nProgram ran to completion...");
     }
 }
