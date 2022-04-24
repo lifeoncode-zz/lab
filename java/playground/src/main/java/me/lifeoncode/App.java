@@ -5,17 +5,14 @@ import java.util.Scanner;
 public class App {
 
     public static void main( String[] args ) {
-        Scanner scanner = new Scanner(System.in);
-
-        while(true) {
-            System.out.print("enter something: ");
-            String user = scanner.nextLine();
-            if (user.equalsIgnoreCase("quit")) {
-                break;
-            }
-            System.out.println("you said: "+user);
+        String[] items = {"milk", "juice", "coffee beans", "sugar", "mango"};
+        for (String item: items) {
+            System.out.println(item);
         }
-
+        System.out.println("\nthen...\n");
+        for (int i = items.length-1; i >= 0; i--) {
+            System.out.println(items[i]);
+        }
     }
 
 }
