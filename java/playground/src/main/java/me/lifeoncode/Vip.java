@@ -6,13 +6,11 @@ public class Vip {
     private final double credLimit;
 
     public Vip() {
-        this("unknown", "unknown", 75_000.0);
+        this("unknown", "unknown@email.com", 0.0);
     }
 
     public Vip(String name, String email) {
-        this.name = name;
-        this.email = email;
-        this.credLimit = 75_000.0;
+        this(name, email, 75_000.0);
     }
 
     public Vip(String name, String email, double credLimitAmount) {
