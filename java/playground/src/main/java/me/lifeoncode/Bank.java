@@ -22,7 +22,7 @@ public class Bank {
             System.out.println("deposit successful: +"+amount);
         }
     }
-    
+
     // create an account number
     public String createAccountNumber() {
         String accountNum = "";
