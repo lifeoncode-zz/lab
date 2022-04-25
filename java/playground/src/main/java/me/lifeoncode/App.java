@@ -10,7 +10,7 @@ public class App {
         System.out.println("\n");
         Vip one = new Vip();
         Vip two = new Vip("james", "james@email.com");
-        Vip three = new Vip("mike", "mike@site.io", 450_000.0);
+        Vip three = new Vip("jasmine", "jasmine@site.io", 450_000.0);
 
         System.out.println(three.getCredLimit());
     }

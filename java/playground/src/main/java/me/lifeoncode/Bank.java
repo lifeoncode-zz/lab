@@ -9,18 +9,17 @@ public class Bank {
     private final String email;
     private final String phone;
 
+    public Bank() {
+        this("unknown", "unknown@email.com", "000111");
+        this.account = "000111";
+        this.balance = 0.0;
+    }
+
     public Bank(String name, String email, String phone) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.account = createAccountNumber();
-    }
-
-    public void deposit(double amount) {
-        if (amount > 0) {
-            this.balance += amount;
-            System.out.println("deposit successful: +"+amount);
-        }
     }
 
     // create an account number
@@ -32,6 +31,13 @@ public class Bank {
             accountNum += num;
         }
         return accountNum;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            this.balance += amount;
+            System.out.println("deposit successful: +"+amount);
+        }
     }
 
     public void withdraw(double amount) {
