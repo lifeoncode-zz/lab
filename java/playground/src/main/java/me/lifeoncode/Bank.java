@@ -1,6 +1,5 @@
 package me.lifeoncode;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Bank {
@@ -9,19 +8,12 @@ public class Bank {
     private final String name;
     private final String email;
     private final String phone;
-    private final Random random = new Random();
 
     public Bank(String name, String email, String phone) {
         this.name = name;
         this.email = email;
         this.phone = phone;
-        // create an account number
-        String accountNum = "";
-        for (int i = 0; i < this.phone.length(); i++) {
-            String num = String.format("%s", random.nextInt(10));
-            accountNum += num;
-            this.account = accountNum;
-        }
+        this.account = createAccountNumber();
     }
 
     public void deposit(double amount) {
@@ -29,6 +21,17 @@ public class Bank {
             this.balance += amount;
             System.out.println("deposit successful: +"+amount);
         }
+    }
+    
+    // create an account number
+    public String createAccountNumber() {
+        String accountNum = "";
+        Random random = new Random();
+        for (int i = 0; i < this.phone.length(); i++) {
+            String num = String.format("%s", random.nextInt(10));
+            accountNum += num;
+        }
+        return accountNum;
     }
 
     public void withdraw(double amount) {
