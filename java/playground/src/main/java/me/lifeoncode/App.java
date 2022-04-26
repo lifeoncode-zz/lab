@@ -3,12 +3,12 @@ package me.lifeoncode;
 public class App {
 
     public static void main( String[] args ) {
-        Bank jake = new Bank("Jake Tran", "jake@jaketran.io", "0728234256");
-        Bank mike = new Bank("Mike Reeves", "micheal@redhat.com", "0834456789");
-        jake.deposit(420);
-        System.out.println(jake.getBalance());
-        jake.withdraw(421);
-        System.out.println(jake.getBalance());
+        Animal animal = new Animal("animal", 1, 1, 5, 5);
+        Dog dog = new Dog("Husky", 8, 20, 2, 4, 1, 20, "beige brown");
+        Snake snake = new Snake("python", 1, 1, 7, 67);
+
+        snake.eat();
+        dog.eat();
     }
 
 }
