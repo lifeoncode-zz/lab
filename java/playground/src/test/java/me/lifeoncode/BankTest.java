@@ -8,6 +8,8 @@ public class BankTest extends TestCase {
     public void testAccountForUnknown() {
         Bank bank = new Bank();
         assertEquals("000111", bank.getAccount());
+        assertEquals("unknown", bank.getName());
+        assertEquals("unknown@email.com", bank.getEmail());
     }
 
     @Test
