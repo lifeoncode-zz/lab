@@ -1,29 +1,28 @@
 package me.lifeoncode;
 
-class Calculator {
-    private int num;
-    private static int AB;
+import java.text.NumberFormat;
+import java.util.Currency;
 
-    public static void add(int x, int y) {
-        System.out.printf("%s + %s = %s\n", x, y, (x+y));
-        System.out.println(AB);
-//        System.out.println(num);
-//        subtract()
+class Car {
+    private static String engineType;
+    private int price;
+
+    public Car(String engineType, int price) {
+        Car.engineType = engineType;
+        this.price = price;
     }
 
-    public void subtract(int x, int y) {
-        System.out.printf("%s - %s = %s\n", x, y, (x-y));
-        add(x, y);
-        System.out.println(num);
-        System.out.println(AB);
+    public void info() {
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        System.out.println("a "+engineType+" car costs "+ currency.format(price));
     }
 }
+
 
 public class App {
 
     public static void main( String[] args ) {
-        Calculator calculator = new Calculator();
-        calculator.subtract(10, 4);
+        new Car("v12", 460_000).info();
     }
 
 }
