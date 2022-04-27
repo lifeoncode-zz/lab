@@ -7,7 +7,7 @@ public class House {
     private final int height;
 
     public House() {
-        this(0, 0, 0, 0);
+        this(0, 0);
     }
 
     public House(int width, int height) {
