@@ -21,6 +21,16 @@ public class Dog extends Animal {
         System.out.println("Chewing...");
     }
 
+    public void walk() {
+        System.out.println(this.getName()+" is walking...");
+        move(5);
+    }
+
+    public void run() {
+        System.out.println(this.getName()+" is running...");
+        move(10);
+    }
+
     public int getEyes() {
         return this.eyes;
     }
