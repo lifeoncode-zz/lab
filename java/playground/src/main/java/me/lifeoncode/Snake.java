@@ -15,6 +15,11 @@ public class Snake extends Animal {
         System.out.println("snake moving at "+speed);
     }
 
+    @Override
+    public void greet(String name) {
+        System.out.println("Snake say hello "+name);
+    }
+
     public void slither() {
         System.out.println(this.getName()+" is slithering...");
         super.move(8);
