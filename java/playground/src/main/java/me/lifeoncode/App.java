@@ -3,11 +3,14 @@ package me.lifeoncode;
 public class App {
 
     public static void main( String[] args ) {
-        Animal animal = new Animal("animal", 1, 1, 5, 5);
-        Dog dog = new Dog("Husky", 8, 20, 2, 4, 1, 20, "beige brown");
-        Snake snake = new Snake("python", 1, 1, 7, 67);
+        House houseA = new House();
+        houseA.info();
 
-        snake.slither();
+        House houseB = new House(155, 55);
+        houseB.info();
+
+        House houseC = new House(5, 15, 288, 88);
+        houseC.info();
     }
 
 }
