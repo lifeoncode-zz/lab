@@ -23,6 +23,10 @@ public class Animal {
         System.out.println("moving at "+speed);
     }
 
+    public void sleep() {
+        System.out.println("Sleeping...");
+    }
+
     public String getName() {
         return this.name;
     }

@@ -9,4 +9,14 @@ public class Snake extends Animal {
     public void eat() {
         System.out.println("Gobbling...");
     }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("snake moving at "+speed);
+    }
+
+    public void slither() {
+        System.out.println(this.getName()+" is slithering...");
+        super.move(8);
+    }
 }

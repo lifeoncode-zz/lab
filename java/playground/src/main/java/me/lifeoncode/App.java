@@ -7,8 +7,7 @@ public class App {
         Dog dog = new Dog("Husky", 8, 20, 2, 4, 1, 20, "beige brown");
         Snake snake = new Snake("python", 1, 1, 7, 67);
 
-        dog.walk();
-        dog.run();
+        snake.slither();
     }
 
 }
