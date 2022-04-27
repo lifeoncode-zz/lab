@@ -19,6 +19,7 @@ public class House {
         this.y = y;
         this.width = width;
         this.height = height;
+        System.out.println("\nConstructor chaining\n");
     }
 
     public void info() {
