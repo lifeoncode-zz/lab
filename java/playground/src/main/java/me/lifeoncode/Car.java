@@ -9,6 +9,10 @@ public class Car extends Vehicle {
     private int speed;
     private int gear;
 
+    public Car() {
+        this("2.4L", 4);
+    }
+
     public Car(String engineType, int numberOfWheels) {
         super(true);
         this.engineType = engineType;

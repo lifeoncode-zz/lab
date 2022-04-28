@@ -1,6 +1,6 @@
 package me.lifeoncode;
 
-public class Animal {
+public abstract class Animal {
     private final String name;
     private final int brain;
     private final int body;
@@ -18,6 +18,8 @@ public class Animal {
         this.size = size;
         this.weight = weight;
     }
+
+    public abstract int getMind();
 
     public void greet(String name) {
         System.out.println("Hello, "+name);

@@ -17,6 +17,9 @@ public class Dog extends Animal {
     }
 
     @Override
+    public int getMind() { return 0; }
+
+    @Override
     public void eat() {
         System.out.println("Chewing...");
     }
