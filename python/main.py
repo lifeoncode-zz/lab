@@ -1,33 +1,18 @@
-import turtle
 
-anton = turtle.Turtle()
-
-def draw_square():
-    anton.color('purple', 'yellow')
-    anton.begin_fill()
-
-    for i in range(4):
-        anton.fd(100)
-        anton.rt(90)
-
-    anton.end_fill()
-
-# one
-draw_square()
-
-anton.penup()
-anton.fd(150)
-anton.pendown()
-
-# two
-draw_square()
-
-anton.penup()
-anton.bk(300)
-anton.pendown()
-
-# three
-draw_square()
+from soupsieve import select
 
 
-turtle.exitonclick()
+class Person:
+
+    def __init__(self, name, age, job):
+        self.name = name
+        self.age = age
+        self.job = job
+
+    def information(self):
+        return f"{self.name} is {self.age} years old and he is a {self.job}."
+
+
+jake = Person("Jake", 23, "game developer")
+info = jake.information()
+print(info)
