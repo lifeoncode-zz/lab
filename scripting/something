@@ -1,0 +1,4 @@
+#!/bin/bash
+read -p "enter: " file
+echo "ok"
+echo $file 

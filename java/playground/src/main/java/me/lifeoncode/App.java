@@ -1,21 +1,18 @@
 package me.lifeoncode;
 
+import java.util.Scanner;
+
 public class App {
     public static void main( String[] args ) {
-        Dog dog = new Dog();
-        dog.bark(5);
+        SuperCar porsche = new SuperCar("Porsche", "911", 2021);
+        LuxuryCar rolls = new LuxuryCar("Rolls Royce", "Wraith", 2020);
+
+        porsche.shiftUp();
+        porsche.shiftUp();
+        porsche.shiftUp();
+        System.out.println(porsche.getGear());
+        porsche.shiftDown();
+        porsche.shiftDown();
+        System.out.println(porsche.getGear());
     }
 }
-
-class Dog {
-    public void bark() {
-        System.out.println("woof!");
-    }
-
-    public void bark(int number) {
-        for(int i = 0; i < number; i++) {
-            System.out.println("woof!");
-        }
-    }
-}
-

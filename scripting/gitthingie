@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd pwd
+
+read -p "stage all changes? " ALL
+if [ $ALL == "yes" ]; then
+	git add .
+else
+	read -p "specify which file(s) to stage" FILE
+	git add $FILE
+
+read -p "comment: " COMMENT
+git commit $COMMENT
+
