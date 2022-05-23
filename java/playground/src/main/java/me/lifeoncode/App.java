@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 public class App {
     public static void main( String[] args ) {
-        SuperCar porsche = new SuperCar("Porsche", "911", 2021);
-        LuxuryCar rolls = new LuxuryCar("Rolls Royce", "Wraith", 2020);
+        Dimensions dimensions = new Dimensions(40, 78, 22);
+        Case theCase = new Case("44T", "Dell", "58W", dimensions);
+        Motherboard board = new Motherboard("77PL", "Dell", 6, 3);
+        Resolution resolution = new Resolution(1920, 1080);
+        Monitor monitor = new Monitor("7T6", "Alienware", 32, resolution);
 
-        porsche.shiftUp();
-        porsche.shiftUp();
-        porsche.shiftUp();
-        System.out.println(porsche.getGear());
-        porsche.shiftDown();
-        porsche.shiftDown();
-        System.out.println(porsche.getGear());
+        Machine machine = new Machine(theCase, board, monitor);
+        machine.getMotherboard().loadProgram("Game utils");
+        machine.getMonitor().displayProgram("Ghost Recon");
     }
 }
