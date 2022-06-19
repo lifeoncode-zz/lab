@@ -33,23 +33,3 @@ def delete_file():
 if __name__ == "__main__":
 	ping()
 
-
-
-class Client:
-	number_of_clients = 0
-
-	def __init__(self, name, id):
-		self.name = name
-		self.id = id
-		Client.add_client()
-
-	@classmethod
-	def add_client(cls):
-		cls.number_of_clients += 1
-
-
-print(Client.number_of_clients)
-jake = Client("Jake", "11fr")
-print(Client.number_of_clients)
-michelle = Client("Michelle", "45ut")
-print(Client.number_of_clients)

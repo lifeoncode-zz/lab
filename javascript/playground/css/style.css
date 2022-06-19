@@ -1,69 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap");
 
 body {
-    background-color: #f08e80;
+    padding: 50px;
 }
 
-header {
-    padding: 24px 0;
-}
-
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-nav a {
-    color: #fff;
-    margin-right: 16px;
-    font-size: 16px;
-}
-
-nav a:last-child {
-    margin: 0;
-}
-
-.logo {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 400;
-}
-
-.cta-btn {
+button {
     padding: 15px 30px;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: #fff;
-    color: #f08e80;
-}
-
-section {
-    padding: 100px 0;
-}
-
-section .container {
-    max-width: 900px;
-}
-
-h1 {
+    border: 0;
     color: #fff;
-    font-size: 60px;
-    font-weight: 70;
+    background-color: blue;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button i {
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: rgb(0, 63, 146);
+}
+
+.content {
+    padding: 50px 0;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: sans-serif;
 }

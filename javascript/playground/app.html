@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            font-family: sans-serif;
+        }
+
+        #output {
+            padding: 20px 0;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: lightgray;
+            border: 0;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkblue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="get-text">GET TEXT</button>
+        <button id="get-json">GET JSON</button>
+        <button id="get-api">GET API</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/post.js"></script>
+</body>
+</html>

@@ -1,18 +1,25 @@
 
-from soupsieve import select
+from curses.ascii import US
 
 
-class Person:
-
-    def __init__(self, name, age, job):
-        self.name = name
-        self.age = age
-        self.job = job
-
-    def information(self):
-        return f"{self.name} is {self.age} years old and he is a {self.job}."
+class User():
+    
+    def __init__(self, username, password) -> None:
+        self.username = username
+        self.password = password
 
 
-jake = Person("Jake", 23, "game developer")
-info = jake.information()
-print(info)
+    def get_username(self):
+        return self.username
+
+    def get_password(self):
+        return self.password
+
+    def user_info(self):
+        return f"{self.username}'s password is {self.password}"
+
+
+jake = User("jake", "1234")
+
+
+print(jake.user_info())

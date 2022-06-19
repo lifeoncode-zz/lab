@@ -10,15 +10,19 @@ public class Lights {
     public void on() {
         if (ON) {
             System.out.println("Lights already turned on.");
+        } else {
+            System.out.println("Turning on the Lights...");
+            this.ON = true;
         }
-        System.out.println("Turning on the Lights...");
     }
 
     public void off() {
         if (!ON) {
             System.out.println("Lights already turned off.");
+        } else {
+            System.out.println("Turning off the Lights...");
+            this.ON = false;
         }
-        System.out.println("Turning off the Lights...");
     }
 
     public boolean areOn() {
