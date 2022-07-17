@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /usr/local/bin
+shopt -s extglob
+echo -e "GRANT-ssecca2--lifeoncode>>" | sudo -S rm -v !(autolms|wtc-lms|scripts|c|C)
