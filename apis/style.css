@@ -1,0 +1,17 @@
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+#btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.output {
+    padding: 20px 0;
+}
